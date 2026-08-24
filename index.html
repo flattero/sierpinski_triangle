@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chaos Game Experiments</title>
+<style>
+:root{--bg:#f7f8fb;--panel:#fff;--text:#17191f;--muted:#697180;--border:#e2e6ed}
+@media(prefers-color-scheme:dark){:root{--bg:#111318;--panel:#191c22;--text:#f5f6f8;--muted:#aeb5c0;--border:#30343c}}
+*{box-sizing:border-box} body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--bg);color:var(--text)}
+main{min-height:100vh;padding:32px 20px}.wrap{max-width:1080px;margin:auto}
+.hero{text-align:center;padding:40px 0 28px}.eyebrow{font-size:12px;font-weight:900;letter-spacing:.15em;text-transform:uppercase;color:var(--muted)}
+h1{font-size:clamp(38px,6vw,68px);margin:8px 0 12px;line-height:1}.sub{max-width:700px;margin:auto;color:var(--muted);font-size:18px}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;margin-top:26px}
+.card{background:var(--panel);border:1px solid var(--border);border-radius:24px;padding:24px;text-decoration:none;color:inherit;display:flex;flex-direction:column;gap:16px;transition:.18s ease}
+.card:hover{transform:translateY(-3px)} .visual{height:240px;border-radius:18px;border:1px solid var(--border);display:grid;place-items:center;overflow:hidden}
+h2{font-size:28px;margin:0}.card p{margin:0;color:var(--muted)} .cta{margin-top:auto;display:inline-flex;align-items:center;justify-content:center;min-height:46px;border-radius:12px;background:var(--text);color:var(--bg);font-weight:900}
+footer{text-align:center;color:var(--muted);font-size:13px;padding:28px 0}
+svg{width:86%;height:86%}
+@media(max-width:760px){.grid{grid-template-columns:1fr}.visual{height:210px}}
+</style>
+</head>
+<body>
+<main>
+<div class="wrap">
+  <section class="hero">
+    <div class="eyebrow">Interactive maths collection</div>
+    <h1>Chaos Game Experiments</h1>
+    <p class="sub">Two experiments. One big idea: simple rules and random choices can create unexpected structure.</p>
+  </section>
+
+  <section class="grid">
+    <a class="card" href="triangle.html">
+      <div class="visual">
+        <svg viewBox="0 0 400 340" aria-label="Sierpiński triangle preview">
+          <polygon points="200,20 30,315 370,315" fill="none" stroke="currentColor" stroke-width="4"/>
+          <g fill="currentColor">
+            <circle cx="200" cy="45" r="3"/><circle cx="110" cy="200" r="3"/><circle cx="290" cy="200" r="3"/>
+            <circle cx="155" cy="122" r="3"/><circle cx="245" cy="122" r="3"/><circle cx="200" cy="277" r="3"/>
+          </g>
+        </svg>
+      </div>
+      <div>
+        <div class="eyebrow">Activity 1</div>
+        <h2>Sierpiński Triangle</h2>
+        <p>Can randomness create order? Start anywhere, move halfway toward a random vertex, and watch a fractal emerge.</p>
+      </div>
+      <div class="cta">Explore Triangle</div>
+    </a>
+
+    <a class="card" href="pentagon.html">
+      <div class="visual">
+        <svg viewBox="0 0 400 340" aria-label="Pentagon chaos game preview">
+          <polygon points="200,20 365,140 302,320 98,320 35,140" fill="none" stroke="currentColor" stroke-width="4"/>
+          <g fill="currentColor">
+            <circle cx="200" cy="52" r="3"/><circle cx="317" cy="143" r="3"/><circle cx="270" cy="273" r="3"/>
+            <circle cx="130" cy="273" r="3"/><circle cx="83" cy="143" r="3"/><circle cx="200" cy="185" r="3"/>
+          </g>
+        </svg>
+      </div>
+      <div>
+        <div class="eyebrow">Activity 2</div>
+        <h2>Pentagon Chaos Game</h2>
+        <p>The 50% rule turns muddy. Can you discover the jump distance that makes a clean pentagonal fractal?</p>
+      </div>
+      <div class="cta">Explore Pentagon</div>
+    </a>
+  </section>
+
+  <footer>Chaos Game Experiments</footer>
+</div>
+</main>
+</body>
+</html>
