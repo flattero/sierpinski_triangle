@@ -6,21 +6,11 @@
 <title>Sierpiński Triangle — The Chaos Game</title>
 <style>
   :root {
-    color-scheme: light dark;
-    --bg: #f7f8fb;
+        --bg: #f7f8fb;
     --panel: #ffffff;
     --text: #17191f;
     --muted: #68707d;
     --border: #e1e4ea;
-  }
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --bg: #111318;
-      --panel: #191c22;
-      --text: #f5f6f8;
-      --muted: #aeb5c0;
-      --border: #30343c;
-    }
   }
   * { box-sizing: border-box; }
   body {
@@ -169,7 +159,7 @@
 </div>
 
 <script>
-(() => {
+document.addEventListener('DOMContentLoaded', () => {
   const canvas = document.getElementById('canvas');
   const ctx = canvas.getContext('2d');
   const resetBtn = document.getElementById('resetBtn');
@@ -492,7 +482,7 @@
 
   setStep(2);
   drawBase();
-})();
+});
 </script>
 </body>
 </html>
